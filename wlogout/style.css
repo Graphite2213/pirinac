@@ -1,0 +1,59 @@
+window {
+    font-family: Fira Code Medium;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    border-color: rgb(137, 136, 152);
+    border-width: 2px;
+    border-style: solid;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: rgba(0, 0, 0, 0.486); 
+    color: #ffffff;
+    background-size: 30%;
+    border-radius: 50px;
+}
+
+button span {
+    font-size: 1.2em;
+}
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/sleep.png"));
+}
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}

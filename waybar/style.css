@@ -1,0 +1,84 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
+* {
+    font-family: "JetBrains Mono Nerd Font", "Noto Sans CJK JP", monospace;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#waybar .module {
+    margin: 0 5px;   
+    padding: 0 2px;  
+}
+
+tooltip {
+  background: @background;
+}
+
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    transition: border-color 0.1s linear, background-color 0.1s linear, color 0.1s linear;
+    font-size: 5px;
+    color: @foreground;
+    padding-left: 0.7em;
+    margin-right: 4px;
+}
+
+#workspaces button.active {
+    border: 2px dashed @foreground;
+    border-radius: 15%;
+    padding: 1px 2px;
+    font-size: 5px;
+    color: @foreground;
+    background-color: transparent;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: transparent;
+    border-color: transparent;
+}
+
+#memory,
+#custom-platform-profile {
+    padding-left: 1em
+}
+
+#clock {
+    margin-left: 20px;
+}
+
+#temperature {
+    margin-right: 20px;
+}
+
+#waybar #custom-wg_connection.connected {
+    color: green;
+}
+
+#waybar #custom-wg_connection.disconnected {
+    color: inherit;
+}
+
+#waybar #custom-power {
+    margin-right: 15px;
+}
+
+#waybar #custom-divider {
+    margin: 0px;
+}

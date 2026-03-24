@@ -1,0 +1,24 @@
+                ssssssssssssssssssss         
+          +ss#s  s+               +s  s#ss+         
+        +ss+ +s  s+              +s  s+ +ss+        
+       +ss+   +s  s+            +s  s+   +sss+      
+     +sss+     +s  s+          +s  s+     +sss+     
+    +sss+       +s  s+        +s  s+        +ss+    
+   +ss+          +s  s+      +s  s+          +sss+  
+ +sss+            +s  s+    +s  s+            +sss+ 
+ sss+              +s  s+  +s  s+               +ss 
+ sss                +s  s++s  s+                sss 
+ +ssssssssssssssssssss   ss  sssssssssssssssssssss 
+       
+ +ssssssssssssssssssss   ss   sssssssssssssssssssss 
+ #sss               +s  s++s  s+               ss+# 
+ +sss+             +s  s+  +s  s+              +sss 
+  +sss+           +s  s+    +s  s+            +ss+  
+    +ss+         +s  s+      +s  s+         +sss+   
+     +ss+       +s  s+        +s  s+       +sss+    
+      +sss+    +s  s+          +s  s+     +ss+      
+       +ss+   +s  s+            +s  s+   +ss+       
+         +ss++s  s+              +s  s++sss+        
+          +ss   s+                +s  ss+         
+               ssssssssssssssssssssss                  
+                                                  

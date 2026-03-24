@@ -1,0 +1,194 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 45,
+    "spacing": 5,
+
+    "modules-left": ["clock", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "custom/divider", "wireplumber", "battery", "custom/divider", "network", "idle_inhibitor", "custom/wg_connection", "custom/hyprsunset", "custom/divider", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "<span size='medium'>{name}</span>",
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+    "hyprland/workspaces#kanji": {
+        "format": "<span size='medium'>{icon}</span>",
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        },
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        }
+    },
+
+    "clock": {
+        "locale": "en_US.UTF-8",
+        "format": "{:%m/%d %H:%M}",
+        "tooltip-format": "<span size='9pt' font='Noto Sans Mono CJK JP'>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "firstweekday": 1,
+            "format": {
+                "weekdays": "<span color='#bfff00'><b>{}</b></span>",
+                "months":   "<span color='#ffffff'><b>{}</b></span>",
+                "days":     "<span color='#ffffff'><b>{}</b></span>",
+                "weeks":    "<span color='#00eeff'><b>W{}</b></span>",
+                "today":    "<span color='#ff0099'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "wireplumber": {
+        "format": "\udb81\udd7e {volume}%",
+        "format-muted": "\udb81\udf5f {volume}%",
+        "max-volume": 200,
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "\uf4bc  {used:0.1f}G"
+    },
+
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "alacritty -e nmtui"
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
+    },
+
+    "hyprland/window": {
+        "format": "<span font='11'>{}</span>",
+        "tooltip-format": "{}"
+    },
+
+    "custom/mission_center": {
+        "format": "\udb82\ude07",
+        "tooltip": false,
+        "on-click": "missioncenter"
+    },
+
+    "custom/notifications": {
+        "format": "\udb80\udc9a",
+        "tooltip": false,
+        "on-click": "swaync-client -t"
+    },
+
+    "custom/power": {
+        "format": "\u23fb",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": "Idle Inhibitor",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        },
+    },
+
+    "custom/wg_connection": {
+        "format": "{}", 
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/wg_status.sh",
+        "interval": 3,
+        "on-click": "systemctl --user is-active tunnel-util.target -q && systemctl --user --now stop tunnel-util.target || systemctl --user --now start tunnel-util.target",
+    },
+
+    "custom/divider": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/hyprsunset": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/hyprs_status.sh",
+        "interval": 3,
+        "on-click": "systemctl --user is-active hyprsunset.service -q && systemctl --user stop hyprsunset.service || systemctl --user start hyprsunset.service",
+        "on-click-right": "pkill hyprsunset"
+    }
+}
+

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  
+  "logo": {
+        "type": "auto",
+        "source": "~/.config/fastfetch/graphite_logo.txt",
+        "padding": {
+            "top": 1,
+            "left": 1,
+            "right": 0
+        },
+        "color": {
+            "1": "yellow"
+        }
+    },
+  
+  "modules": [
+    "break",
+
+    {
+        "type": "custom",
+        "format": "\u001b[90m──────────────────────Hardware──────────────────────"
+    },
+    {
+        "type": "host",
+        "key": "Host ",
+        "keyColor": "green"
+    },
+    {
+        "type": "cpu",
+        "key": " CPU ",
+        "keyColor": "green"
+    },
+    {
+        "type": "gpu",
+        "key": "󰢮 GPU ",
+        "keyColor": "green"
+    },
+    {
+        "type": "memory",
+        "key": "󰍛 RAM ",
+        "keyColor": "green"
+    },
+    {
+        "type": "disk",
+        "key": " Disk ",
+        "keyColor": "green"
+    },
+    {
+        "type": "custom",
+        "format": "\u001b[90m──────────────────────Software──────────────────────"
+    },
+    {
+        "type": "os",
+        "key": " OS ",
+        "keyColor": "green"
+    },
+    {
+        "type": "kernel",
+        "key": " Kernel ",
+        "keyColor": "green"
+    },
+    {
+        "type": "packages",
+        "key": "󰏖 Packages ",
+        "keyColor": "green"
+    },
+    {
+        "type": "shell",
+        "key": " Shell ",
+        "keyColor": "green"
+    },
+    "break",
+
+    {
+        "type": "de",
+        "key": " DE ",
+        "keyColor": "green"
+    },
+    {
+        "type": "lm",
+        "key": " DM ",
+        "keyColor": "green"
+    },
+    {
+        "type": "wm",
+        "key": " WM ",
+        "keyColor": "green"
+    },
+    {
+        "type": "terminal",
+        "key": " Terminal ",
+        "keyColor": "green"
+    },
+    {
+        "type": "custom",
+        "format": "\u001b[90m───────────────────────Uptime───────────────────────"
+    },
+    {
+        "type": "uptime",
+        "key": " Uptime ",
+        "keyColor": "green"
+    },
+    "break",
+
+    {
+        "type": "colors",
+        "symbol": "circle"
+    }
+  ]
+}

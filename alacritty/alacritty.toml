@@ -1,0 +1,27 @@
+general.import = ["~/.cache/wal/colors-alacritty.toml"]
+
+[window]
+opacity = 0.85
+blur = false
+padding = { x = 5, y = 5 }
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[font]
+normal = { family = "Hack", style = "Regular" }
+bold = { family = "Hack", style = "Bold" }
+italic = { family = "Hack", style = "Italic" }
+bold_italic = { family = "Hack", style = "BoldItalic" }
+size = 10
+
+[terminal]
+shell = "/usr/bin/fish"
+
+[cursor]
+style = { shape = "Underline", blinking = "Always" }
+blink_timeout = 0
+
+[mouse]
+hide_when_typing = true
