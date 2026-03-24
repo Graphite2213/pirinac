@@ -1,0 +1,12 @@
+*
+!.gitignore
+!alacritty
+!autostart
+!cava
+!bottom
+!fastfetch
+!nautilus
+!wal
+!waybar
+!wlogout
+!wofi
