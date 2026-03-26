@@ -1,4 +1,4 @@
-allow_images=true
+allow_images=false
 hide_scroll=true
 no_actions=true
 term=alacritty

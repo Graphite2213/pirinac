@@ -1,43 +1,22 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 45,
+    "position": "left",
+    "width": 10,
     "spacing": 5,
+    "reload_style_on_change": true,
 
-    "modules-left": ["clock", "hyprland/window"],
+    "modules-left": ["clock", "custom/divider", "wireplumber"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "custom/divider", "wireplumber", "battery", "custom/divider", "network", "idle_inhibitor", "custom/wg_connection", "custom/hyprsunset", "custom/divider", "custom/power"],
+    "modules-right": ["network", "custom/wg_connection", "custom/hyprsunset", "custom/divider", "custom/power"],
 
     "hyprland/workspaces": {
-        "format": "<span size='medium'>{name}</span>",
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-
-        "format-icons": {
-            "active": "\uf444",
-            "default": "\uf4c3"
-        },
-        "icon-size": 10,
-        "sort-by-number": true,
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        }
-    },
-
-    "hyprland/workspaces#kanji": {
         "format": "<span size='medium'>{icon}</span>",
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
 
+        "format-icons": {
+            "1": ">_"
+        },
         "icon-size": 10,
         "sort-by-number": true,
         "persistent-workspaces": {
@@ -45,30 +24,13 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
-        },
-        "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "6": "六",
-            "7": "七",
-            "8": "八",
-            "9": "九",
-            "10": "十"
+            "5": []
         }
     },
 
     "clock": {
         "locale": "en_US.UTF-8",
-        "format": "{:%m/%d %H:%M}",
+        "format": "{:%H:%M\n%d/%m}",
         "tooltip-format": "<span size='9pt' font='Noto Sans Mono CJK JP'>{calendar}</span>",
         "calendar": {
             "mode": "month",
@@ -91,7 +53,7 @@
     },
 
     "wireplumber": {
-        "format": "\udb81\udd7e {volume}%",
+        "format": "{volume}%",
         "format-muted": "\udb81\udf5f {volume}%",
         "max-volume": 200,
         "scroll-step": 5,
@@ -178,7 +140,7 @@
     },
 
     "custom/divider": {
-        "format": "|",
+        "format": "///",
         "tooltip": false
     },
 

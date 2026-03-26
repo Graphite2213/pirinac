@@ -1,26 +1,41 @@
-@define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
-@define-color background #000000;
+@define-color eva-purple #7b3fa0;
+@define-color eva-green #4aad52;
+@define-color eva-orange #e8521a;
+@define-color module-bg #0d0d0d;
+@define-color muted-col #4a5060;
 
+/* Main */
 * {
-    font-family: "JetBrains Mono Nerd Font", "Noto Sans CJK JP", monospace;
+    font-family: "Perfect DOS VGA 437", monospace;
     font-size: 20px;
     padding: 0;
     margin: 0;
+    border-radius: 0px;
 }
 
 #waybar {
-    color: @foreground;
-    background-color: @background;
+    color: white;
+    background-color: @module-bg;
+    border-right: 2px solid @eva-purple;
 }
 
-#waybar .module {
-    margin: 0 5px;   
-    padding: 0 2px;  
+/* Modules */
+.modules-left {
+    padding: 5px;
+    padding-right: 10px;
+}
+
+.modules-center {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modules-right {
+    padding: 5px;
 }
 
 tooltip {
-  background: @background;
+  background: black;
 }
 
 tooltip label {
@@ -28,57 +43,56 @@ tooltip label {
 }
 
 #workspaces button {
-    transition: border-color 0.1s linear, background-color 0.1s linear, color 0.1s linear;
     font-size: 5px;
-    color: @foreground;
-    padding-left: 0.7em;
-    margin-right: 4px;
+    padding-bottom: 3px;
+    color: white;
 }
 
 #workspaces button.active {
-    border: 2px dashed @foreground;
-    border-radius: 15%;
-    padding: 1px 2px;
-    font-size: 5px;
-    color: @foreground;
+    border-left: 2px solid @eva-green;
+    color: @muted-col;
     background-color: transparent;
 }
 
 #workspaces button.empty {
-    color: @foreground-inactive;
+    color: white;
 }
 
 #workspaces button:hover {
-    background-color: transparent;
-    color: transparent;
-    border-color: transparent;
-}
-
-#memory,
-#custom-platform-profile {
-    padding-left: 1em
+    color: @muted-col;
 }
 
 #clock {
-    margin-left: 20px;
+    font-size: large;
 }
 
-#temperature {
-    margin-right: 20px;
+#waybar #custom-divider {
+    color: @eva-green;
+}
+
+#waybar #custom-power, 
+#waybar #custom-wg_connection,
+#waybar #custom-hyprsunset,
+#waybar #network {
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 30px;
+    min-width: 50px;
+}
+
+#waybar #custom-wg_connection,
+#waybar #network
+{
+    margin-bottom: -10px;
+}
+
+#waybar #custom-power{
+    margin-bottom: 10px;
 }
 
 #waybar #custom-wg_connection.connected {
-    color: green;
+    color: @eva-green;
 }
 
 #waybar #custom-wg_connection.disconnected {
     color: inherit;
-}
-
-#waybar #custom-power {
-    margin-right: 15px;
-}
-
-#waybar #custom-divider {
-    margin: 0px;
 }
