@@ -42,18 +42,14 @@
       "button-text": "Clear"
     },
     "dnd": {
-      "text": "Silence"
+      "text": "/// Silence"
     },
     "label": {
       "max-lines": 1,
       "text": "Notification"
     },
     "mpris": {
-      "image-size": 60,
-      "image-radius": 0
-    },
-    "volume": {
-      "label": "󰕾"
+      "image-size": 60
     }
   }
 }

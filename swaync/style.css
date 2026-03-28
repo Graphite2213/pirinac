@@ -4,14 +4,16 @@
 @define-color module-bg #0d0d0d;
 @define-color muted-col #4a5060;
 
-* { font-size: 13px;
+* { 
+  all: none;
+  font-size: 13px;
   font-family: "Perfect DOS VGA 437";
   transition: 200ms;
+  border-radius: 0;
 }
 
 /* Audio slider */
 scale trough {
-  all: unset;
   margin: 0rem 1rem;
   background-color: @module-bg;
   min-height: 8px;
@@ -19,64 +21,51 @@ scale trough {
 }
 
 slider {
-  all: unset;
   background-color: #181818;
 }
+
 /* Floating notifs */
 .floating-notifications.background .notification-row .notification-background {
-  all: unset;
   border-radius: 0;
-  margin: 18px;
   background-color: @module-bg;
   border: 2px solid @eva-purple;
   color: #eeeeee;
   padding: 0;
 }
 
-.floating-notifications.background .notification-row .notification-background .notification {
-  all: unset;
-  padding: 7px;
-  border-radius: 12.6px;
+.floating-notifications.background .notification-row .notification-background .notification .notification-content:hover {
+  background-color: @module-bg; /* or whatever color you want */
 }
 
-.floating-notifications.background .notification-row .notification-background .notification.critical {
-  all: unset;
-  box-shadow: inset 0 0 7px 0 #f38ba8;
-  border-radius: 12.6px;
+.floating-notifications.background .notification-row .notification-background .notification {
+  padding: 7px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content {
-  all: unset;
   margin: 7px;
-  border-radius: 12.6px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-  all: unset;
+  font-family: 'JetBrains Mono';
   color: #eeeeee;
-  border-radius: 12.6px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
-  all: unset;
   color: #eeeeee;
-  border-radius: 12.6px;
+  font-family: 'JetBrains Mono';
 }
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
-  all: unset;
   color: #eeeeee;
+  font-family: 'JetBrains Mono';
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
-  all: unset;
   min-height: 3.4em;
-  border-radius: 12.6px;
 }
 
 /* Window */
 .control-center {
-  all: unset;
   margin: 18px;
   background-color: @module-bg;
   color: #eeeeee;
@@ -85,95 +74,54 @@ slider {
   border: 2px solid @eva-purple;
 }
 
+.notification-row > * {
+  background-color: @module-bg;
+  border: 0;
+}
+
 .control-center .widget-title > label {
-  all: unset;
   color: #eeeeee;
   font-size: 1.1em;
   margin-bottom: 20px;
 }
 
 .control-center .notification-row .notification-background {
-  all: unset;
-  border-radius: 7px;
   color: #eeeeee;
-  background-color: #181818;
-  box-shadow: inset 0 0 0 1px #000000;
-  margin-top: 14px;
-  margin: 8px;
+  background-color: @module-bg;
+  border: solid 1px @eva-green;
+  margin-bottom: 5px;
 }
 
 .control-center .notification-row .notification-background .notification {
-  all: unset;
-  padding: 7px;
-  border-radius: 7px;
+  padding: 5px;
+}
+
+.control-center .notification-row .notification-background .notification:hover {
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .body {
+  font-size: large;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .summary,
+.control-center .notification-row .notification-background .notification .notification-content .text-box .time {
+  font-size: medium;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .body,
+.control-center .notification-row .notification-background .notification .notification-content .text-box .summary,
+.control-center .notification-row .notification-background .notification .notification-content .text-box .time {
+  font-family: 'JetBrains Mono';
 }
 
 .control-center .notification-row .notification-background .notification.critical {
-  all: unset;
-  box-shadow: inset 0 0 7px 0 #f38ba8;
-  border-radius: 12.6px;
+  border: solid 1px @eva-orange;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content {
-  all: unset;
-  margin: 7px;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .summary {
-  all: unset;
-  color: #eeeeee;
-  border-radius: 12.6px;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .time {
-  all: unset;
-  color: #eeeeee;
-}
-
-.control-center .notification-row .notification-background .notification .notification-content .body {
-  all: unset;
-  color: #eeeeee;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * {
-  all: unset;
-  min-height: 3.4em;
-  border-radius: 12.6px;
-}
-
-.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-  all: unset;
-  box-shadow: inset 0 0 0 1px #45475a;
-  background-color: #74c7ec;
-  color: #cdd6f4;
-  border-radius: 12.6px;
-}
-
-.control-center .notification-row .notification-background .close-button {
-  all: unset;
-  margin: 7px;
-  padding: 2px;
-  border-radius: 6.3px;
-  color: #1e1e2e;
-  background-color: #eeeeee;
-}
-
-.control-center .notification-row .notification-background:hover {
-  all: unset;
-  border-radius: 12.6px;
-}
-
-.notification.critical progress {
-  all: unset;
-  background-color: #f38ba8;
-  border-radius: 12.6px;
-}
-
-.notification.low progress,
-.notification.normal progress {
-  all: unset;
-  background-color: #00FFFF;
-  border-radius: 12.6px;
+.notification {
+  background-color: @module-bg;
+  border: none;
+  box-shadow: none;
 }
 
 .widget-dnd {
@@ -181,74 +129,45 @@ slider {
   font-size: x-large;
 }
 
-.label-dnd {
+.widget-dnd > label {
   font-size: x-large;
 }
 
 .widget-dnd > switch {
   font-size: initial;
-  border-radius: 8px;
   background: #181818;
   border: 1px solid #000000;
   box-shadow: none;
 }
 
 .widget-dnd > switch:checked {
-  background: #181818;
+  background: @eva-orange;
 }
 
 .widget-dnd > switch slider {
   background: #eeeeee;
-  border-radius: 8px;
-  border: 1px solid #eeeeee;
+  border: 1px solid black;
+}
+
+.widget-mpris {
+  font-family: 'JetBrains Mono';
 }
 
 .widget-mpris .widget-mpris-player {
-  all: unset;
   background: #181818;
-  border-radius: 0;
 }
 
 .widget-mpris .widget-mpris-title {
-  all: unset;
   font-size: 1.2rem;
   font-family: 'JetBrains Mono';
 }
 
 .widget-mpris .widget-mpris-subtitle {
-  all: unset;
+  font-family: 'JetBrains Mono';
   font-size: 0.8rem;
 }
 
-.widget-menubar > box > .menu-button-bar > button > label {
-  all: unset;
-  font-size: 3rem;
-  padding: 0.5rem 2rem;
-}
-
-.widget-volume {
-  all: unset;
-  padding-top: 1rem;
-  border-radius: 12.6px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.widget-volume label {
-  all: unset;
-  font-size: 1.5rem;
-  color: #eeeeee;
-  border-radius: 12.6px;
-}
-
-.widget-volume trough highlight {
-  all: unset;
-  background: #eeeeee;
-  border-radius: 12.6px;
-}
-
 .image {
-  all: unset;
   padding-right: 0.5rem;
 }
 
@@ -256,27 +175,12 @@ slider {
   background-color: rgb(0, 0, 0);
 }
 
-.widget-buttons-grid {
-  font-size: x-large;
-  padding: 5px;
-  margin: 10px;
-  background: #181818;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 3px;
-  background: white;
-  color: black;
-  transition: background-color 0.15s ease-in-out;
-}
-
-.widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: #757575;
-  color: #000000;
-}
-
 .widget-title {
   font-size: x-large;
+}
+
+.notification-group {
+  background-color: @module-bg;
 }
 
 .control-center-clear-all {
@@ -284,8 +188,4 @@ slider {
   border: 1px solid @eva-orange;
   background-color: @module-bg;
   border-radius: 0;
-}
-
-.parters {
-    color: @eva-green;
 }

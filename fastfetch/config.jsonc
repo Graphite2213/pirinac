@@ -3,14 +3,11 @@
   
   "logo": {
         "type": "auto",
-        "source": "~/.config/fastfetch/graphite_logo.txt",
+        "source": "~/.config/fastfetch/nerv.txt",
         "padding": {
             "top": 1,
             "left": 1,
             "right": 0
-        },
-        "color": {
-            "1": "yellow"
         }
     },
   
