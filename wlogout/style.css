@@ -1,20 +1,26 @@
+@define-color eva-purple #7b3fa0;
+@define-color eva-green #4aad52;
+@define-color eva-orange #e8521a;
+@define-color module-bg #0d0d0d;
+@define-color muted-col #4a5060;
+
 window {
-    font-family: Fira Code Medium;
-    font-size: 16pt;
+    font-family: 'Times New Roman MT Condensed';
+    font-size: 70pt;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
 }
 
 button {
     margin: 10px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20%;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50px;
-    border-color: rgb(137, 136, 152);
-    border-width: 2px;
+    background-color: inherit;
+    border-color: black;
+    border-width: 5px;
     border-style: solid;
+}
+
+button * {
+    margin-bottom: 70px;
 }
 
 button:focus {
@@ -24,36 +30,15 @@ button:focus {
 
 button:hover,
 button:focus-visible {
-    background-color: rgba(0, 0, 0, 0.486); 
+    background-color: rgba(0, 0, 0, 1); 
     color: #ffffff;
-    background-size: 30%;
-    border-radius: 50px;
+    border-color: #ff5e24;
+    border-width: 5px;
+    border-style: double;
+    background-color: #B72725;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; 
 }
 
 button span {
     font-size: 1.2em;
-}
-
-#lock {
-    background-image: image(url("./icons/lock.png"));
-}
-
-#logout {
-    background-image: image(url("./icons/logout.png"));
-}
-
-#suspend {
-    background-image: image(url("./icons/sleep.png"));
-}
-
-#shutdown {
-    background-image: image(url("./icons/power.png"));
-}
-
-#reboot {
-    background-image: image(url("./icons/restart.png"));
-}
-
-#hibernate {
-    background-image: image(url("./icons/hibernate.png"));
 }
